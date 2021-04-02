@@ -40,6 +40,8 @@ Remove keyword is used for removing packages eg. `apt remove nano`
 
 #### Redirection commands
 
+Standard output is a screen & standard input is a keyboard. We can redirect this using `>` (from output to input) or `<`.
+
 `cat` command can combined two files into one
 `cat file1.txt file2.txt > combined.txt`
 `echo hello > hello.txt` create a hello.txt and write hello into the file
