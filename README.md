@@ -7,7 +7,8 @@ Instead of running `docker pull ubuntu`, we can run `docker run ubunut` and if t
 `docker ps` to see list of running processes or running containers
 `docker ps -a` to see all containers (stopped containers included)
 `docker run -it ubuntu` to run a container with interactive mode
-`docker start -i $ID` to start a container with interactive mode
+`docker start -i $CONTAINER_ID` to start a container with interactive mode
+`docker exec -it -u $USER_NAME $CONTAINER_ID bash` to connecint into running container with different user then root with bash.
 
 ### Ubuntu
 
@@ -98,3 +99,17 @@ The process is an instance of the running program.
 `sleep 40 &` to sleep command for 40 sec, `&` and put into backgroud so that we can use a terminal.
 
 `kill $PID` to kill program/process with its PID number
+
+#### Managing Users
+
+`useradd` to add a new user
+`usermod` to modify a user
+`userdel` to delete a user
+
+`useradd -m john` the flag -m is to create a home directory. To see all flags run just `useradd`.
+
+Users are store in a configuration file in /etc/passwd (It is missleading because there are no passwords but only account information about users)
+
+`usermod -s /bin/bash john` to use bash instead of sh when openning a new terminal
+`cat /etc/shadow` to see encripted paswords
+`adduser` is a newer command for adding a new user with interactive question to get more information but in docker we use useradd instead to run the additional information under the hood.
