@@ -89,3 +89,12 @@ or we can use echo but we have to include $ like `echo $PATH`
 `export` to set up a variable in current terminal session eg `export DB_USER=Tomas`
 `echo $DB_USER` or `printenv DB_USER` to print the db user
 .bashrc is the place where we store pernament environment variables. To have access to the newly created variable you have to `exit` session or you can use `source .bashrc` if we are not in home directory then `source ~/.bashrc`
+
+#### Managing Processes
+
+The process is an instance of the running program.
+
+`ps` to see all running programs/processes contains PID TTY TIME & CMD
+`sleep 40 &` to sleep command for 40 sec, `&` and put into backgroud so that we can use a terminal.
+
+`kill $PID` to kill program/process with its PID number
