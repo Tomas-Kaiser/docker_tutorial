@@ -113,3 +113,18 @@ Users are store in a configuration file in /etc/passwd (It is missleading becaus
 `usermod -s /bin/bash john` to use bash instead of sh when openning a new terminal
 `cat /etc/shadow` to see encripted paswords
 `adduser` is a newer command for adding a new user with interactive question to get more information but in docker we use useradd instead to run the additional information under the hood.
+
+#### Managing Groups
+
+`groupadd`
+`groupmod`
+`groupdel`
+
+`groupadd developers` to have a group for developers with the same kind of permission
+`cat /etc/group` to see all groups
+
+Each user has one primary group and zero or more suplimentery groups. Primary group is automatically created when we create a new user with the same name.
+
+`usermod -G developers john` to add john into developers group
+`usermod -G developers,artist john` to add john into multiple groups
+`groups john` to see in which groups is john
