@@ -7,6 +7,7 @@ Instead of running `docker pull ubuntu`, we can run `docker run ubunut` and if t
 `docker ps` to see list of running processes or running containers
 `docker ps -a` to see all containers (stopped containers included)
 `docker run -it ubuntu` to run a container with interactive mode
+`docker start -i $ID` to start a container with interactive mode
 
 ### Ubuntu
 
@@ -79,3 +80,12 @@ mkdir test;\
 cd hello;\
 echo done
 '''
+
+#### Environment Variables
+
+`printenv` to see all environments variables in the machine
+`printenv PATH` to see particular variable (everything is case sensitive)
+or we can use echo but we have to include $ like `echo $PATH`
+`export` to set up a variable in current terminal session eg `export DB_USER=Tomas`
+`echo $DB_USER` or `printenv DB_USER` to print the db user
+.bashrc is the place where we store pernament environment variables. To have access to the newly created variable you have to `exit` session or you can use `source .bashrc` if we are not in home directory then `source ~/.bashrc`
