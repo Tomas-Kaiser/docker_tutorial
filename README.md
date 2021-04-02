@@ -61,3 +61,5 @@ Standard output is a screen & standard input is a keyboard. We can redirect this
 `find` command is to find files and directories. If we run `find` it will print out all files and directories in the current directory recursively.
 `find -type d` to find all directories only in current directory
 `find -type f` to find all files only in current directory
+`find -type f -name "f*"` to find all files with name which starts with f
+`find -type f -iname "f*"` iname is case insensitive
