@@ -55,3 +55,9 @@ Standard output is a screen & standard input is a keyboard. We can redirect this
 `grep -i hello file1.txt file2.txt`
 `grep -i -r hello .` -r is recursevly or we can combined the flags
 `grep -ir hello .` to find recursevly hello in current directory
+
+#### Finding Files & Directories
+
+`find` command is to find files and directories. If we run `find` it will print out all files and directories in the current directory recursively.
+`find -type d` to find all directories only in current directory
+`find -type f` to find all files only in current directory
