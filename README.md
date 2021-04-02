@@ -46,3 +46,12 @@ Standard output is a screen & standard input is a keyboard. We can redirect this
 `cat file1.txt file2.txt > combined.txt`
 `echo hello > hello.txt` create a hello.txt and write hello into the file
 `ls -l /etc > files.txt` list long of etc to write into files.txt
+
+#### Searching for Text
+
+`grep` global regular expression print is used to search text in one or more files
+`grep -i` search case insensitive
+`grep -i hello file.txt`
+`grep -i hello file1.txt file2.txt`
+`grep -i -r hello .` -r is recursevly or we can combined the flags
+`grep -ir hello .` to find recursevly hello in current directory
