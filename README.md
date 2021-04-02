@@ -63,3 +63,19 @@ Standard output is a screen & standard input is a keyboard. We can redirect this
 `find -type f` to find all files only in current directory
 `find -type f -name "f*"` to find all files with name which starts with f
 `find -type f -iname "f*"` iname is case insensitive
+
+#### Chaining Commads
+
+we can use semi-colon to seperate commands like `mkdir test ; cd test ; echo done` but if the first command fails the others will be executed. If we want to stop executing when a command faild we can use and operateor `&&` like `mkdir test && cd test && echo done`
+
+We also have or operator `||` like `mkdir test || echo "Directory exists"`
+
+We can also pipeling like `ls /bin | less` ls /bin output will be sent to the less command. What comes from the `ls /bin` command goes to second command `less`
+Another example `ls /bin | head -n 5`
+
+We can break a line with back slash `\` like
+'''
+mkdir test;\
+cd hello;\
+echo done
+'''
