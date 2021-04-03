@@ -128,3 +128,37 @@ Each user has one primary group and zero or more suplimentery groups. Primary gr
 `usermod -G developers john` to add john into developers group
 `usermod -G developers,artist john` to add john into multiple groups
 `groups john` to see in which groups is john
+
+#### File Permissions
+
+`ls -l` to see the permissions of the files
+
+`-rw-r--r-- 1 root root 11 Apr 3 15:16 deploy.sh`
+`drwxr-xr-x 2 john john 4096 Apr 2 18:00 john`
+
+First possition: `-` stands for file `d` stands for directory
+After the first possition, there three groups then.
+`rw- r-- r--`
+`rwx-xr-x`
+
+`r` stands for read permission
+`w` stands for write permission
+`x` stands for execute permission
+
+By default all directories have `x` execute permisson as we can use `cd`
+
+The First group represents the permission for the user who owns the file => root user in this case.
+
+The second group repersents the permision for the group that onws that file => aslo root. By default every user that is created is automaticaly placed inside a group within the same name.
+
+The third group is a permission for everyone else.
+
+`./deploy.sh` to execute the file. To give a executable permission we need to use `chmod` change mode command.
+
+`chmod u` user
+`chmod g` group
+`chmod o` others
+
+`chmod u+x deploy.sh` to add execute permisson for a user
+`chmod u-x` to remove execute permission for a user
+`chmod og+x+r-w file1.sh file2.sh` we can write a number of variations...
