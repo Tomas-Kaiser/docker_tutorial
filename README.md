@@ -162,3 +162,14 @@ The third group is a permission for everyone else.
 `chmod u+x deploy.sh` to add execute permisson for a user
 `chmod u-x` to remove execute permission for a user
 `chmod og+x+r-w file1.sh file2.sh` we can write a number of variations...
+
+## Building Images
+
+This section is about:
+
+- Creating Docker files
+- Versioning images
+- Sharing images
+- Saving and loading images
+- Reducing the image size
+- Speeding up builds
