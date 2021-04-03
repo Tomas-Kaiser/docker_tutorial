@@ -6,9 +6,9 @@ Instead of running `docker pull ubuntu`, we can run `docker run ubunut` and if t
 
 `docker ps` to see list of running processes or running containers
 `docker ps -a` to see all containers (stopped containers included)
-`docker run -it ubuntu` to run a container with interactive mode
+`docker run -it ubuntu` to create & start newly created container with interactive mode
 `docker start -i $CONTAINER_ID` to start a container with interactive mode
-`docker exec -it -u $USER_NAME $CONTAINER_ID bash` to connecint into running container with different user then root with bash.
+`docker exec -it -u $USER_NAME $CONTAINER_ID bash` to connect into running container with different user then root with bash.
 
 ### Ubuntu
 
@@ -173,3 +173,21 @@ This section is about:
 - Saving and loading images
 - Reducing the image size
 - Speeding up builds
+
+### Images & Containers
+
+Images include everyting what application needs to run. It contains:
+
+- A cut-down OS
+- Third-party libraries
+- Application files
+- Environment variables
+- etc.
+
+Once we have an image we can start a contairner from it.
+
+Containers is like a virtual machine (vm).
+
+- Provides an isolated environment for executing an application
+- Can be stopped & restarted containers
+- A container is "just" a spacial kind of system process!
