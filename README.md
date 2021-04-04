@@ -228,7 +228,7 @@ Start a container with created image react-app.
 
 `docker run -it react-app sh` To run the container with shell (Alpine does not support bash as it is very small version of linux, onlu shell can be used to see files etc.)
 
-### Copying Files and Directories
+### Copying Files & Directories
 
 We use `COPY` & `ADD`. It is very similiar but `ADD` has additional features.
 
@@ -242,3 +242,7 @@ COPY . .
 '''
 
 We can also use `ADD` which has the same syntax as `COPY` but ADD has two additional features. With ADD we can add files from url `ADD http://.../file.json .`or if we pass compressed file it will automaticaly uncompress the file `ADD file.zp .` The best practise is to use `COPY` unless we need to use those two additional features.
+
+### Excluding Files & Directories
+
+To exclude files & directories we have to create a file .dockerignore. It is similar to .gitignore
