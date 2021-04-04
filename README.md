@@ -258,3 +258,8 @@ Sometimes we need to setup environemnt variables such as `ENV API_URL=http://api
 ### Exposing Ports
 
 `EXPOSE 3000` to expose a container to listen to 3000
+
+### Setting the User
+
+We should use root user so to create a new user to run our app we can use folling commad:
+`RUN addgroup app && adduser -S -G app app` to add group called app & add a user called app -S system user into -G group called app
