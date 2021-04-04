@@ -191,3 +191,39 @@ Containers is like a virtual machine (vm).
 - Provides an isolated environment for executing an application
 - Can be stopped & restarted containers
 - A container is "just" a spacial kind of system process!
+
+### Docker File
+
+The first thing to dokerize an application is adding a Dockerfile. A Dockerfile contains an instructions for building an image.
+
+- FROM
+- WORKDIR
+- COPY
+- ADD
+- RUN
+- ENV
+- EXPOSE
+- USER
+- CMD
+- ENTRYPOINT
+
+### Choosing the Right Images
+
+For React app we need a Node running on Alpine OS.
+Into Dockerfile we add `FROM`:
+`FROM node:14.16.0-alpine3.13`
+
+Now we can build an image:
+`docker build -t react-app .`
+`-t` to tag/name an image (in this case we named our image react-app)
+`.` to tell docker where to find a Dockerfile
+
+`docker images` or `docker image ls` to see all build images!
+
+Start a container with created image react-app.
+`docker run -it react-app`
+`-i` stands for interactive regime
+`-t` stands for tag
+`-it` it is combination of above
+
+`docker run -it react-app sh` To run the container with shell (Alpine does not support bash as it is very small version of linux, onlu shell can be used to see files etc.)
