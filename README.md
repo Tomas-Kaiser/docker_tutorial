@@ -265,3 +265,19 @@ We should not use root user because if we connect to the app with root user then
 `RUN addgroup app && adduser -S -G app app` to add group called app & add a user called app -S system user into -G group called app. Note: alpine linux does have useradd like ubuntu. It has just adduser command.
 
 `USER app` to set user so that all the following commands will be executed by this user called app (not with root user as a default).
+
+### Defining Entrypoints
+
+`docker run react-app npm start` to start a container and start a react app inside of the container. If we do not want to everytime specify this command `npm start`, we have to use a command instruction `CMD` or `ENTRYPOINT` command in dockerfile.
+
+Then we can simply run `docker run react-app`. Note `CMD` is suplying a default command so we can use it just once (the very last will be used if more CMD commands are in dockerfile).
+
+RUN x CMD
+
+Because of both these can execute commands. The `RUN` instruction is a build time instruction (executing in a time of building the image) in contrast `CMD` instruction is a run time instruction (executing when starting a container).
+
+`CMD` construction has to forms:
+`CMD npm start` is a shell form
+`cmd ["npm", "start"]` is a exec (execute) form
+
+The difference is when execude this `CMD npm start` docke will execute this command inside of separete shell. In linex this is in /bin/sh in windows cmd. The best practise is to use execute form because of this we can execute this command `cmd ["npm", "start"]` directly and there is no need to spin up another shell process. ALWAYS use the execute form!
