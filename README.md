@@ -250,3 +250,11 @@ To exclude files & directories we have to create a file .dockerignore. It is sim
 ### Running Commands
 
 We use a `RUN` command to execute any commands we would normally execute in a terminal session like `RUN npm install` or `RUN apt install python`.
+
+### Setting Environment Variables
+
+Sometimes we need to setup environemnt variables such as `ENV API_URL=http://api.myapp.com/`
+
+### Exposing Ports
+
+`EXPOSE 3000` to expose a container to listen to 3000
