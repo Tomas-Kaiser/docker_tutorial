@@ -227,3 +227,18 @@ Start a container with created image react-app.
 `-it` it is combination of above
 
 `docker run -it react-app sh` To run the container with shell (Alpine does not support bash as it is very small version of linux, onlu shell can be used to see files etc.)
+
+### Copying Files and Directories
+
+We use `COPY` & `ADD`. It is very similiar but `ADD` has additional features.
+
+`COPY` to copy all the current files & directories of the current directory
+
+`COPY . /app/` to copy all of the files & directories of the current directory to copy into /app/ which is an absolute path. To use relative path we have to use `WORKDIR` like:
+
+'''
+WORKDIR /app
+COPY . .
+'''
+
+We can also use `ADD` which has the same syntax as `COPY` but ADD has two additional features. With ADD we can add files from url `ADD http://.../file.json .`or if we pass compressed file it will automaticaly uncompress the file `ADD file.zp .` The best practise is to use `COPY` unless we need to use those two additional features.
