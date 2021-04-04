@@ -246,3 +246,7 @@ We can also use `ADD` which has the same syntax as `COPY` but ADD has two additi
 ### Excluding Files & Directories
 
 To exclude files & directories we have to create a file .dockerignore. It is similar to .gitignore
+
+### Running Commands
+
+We use a `RUN` command to execute any commands we would normally execute in a terminal session like `RUN npm install` or `RUN apt install python`.
