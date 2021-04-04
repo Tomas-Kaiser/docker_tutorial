@@ -283,3 +283,13 @@ Because of both these can execute commands. The `RUN` instruction is a build tim
 The difference is when execude this `CMD npm start` docke will execute this command inside of separete shell. In linex this is in /bin/sh in windows cmd. The best practise is to use execute form because of this we can execute this command `cmd ["npm", "start"]` directly and there is no need to spin up another shell process. Also it makes it easier and faster to clean up resources when you stop containers. ALWAYS use the execute form!
 
 We also have another instruction called `ENTRYPOINT` which is very similar to `cmd`. It also have shel & exec form. The difference is that we can always override the default command `cmd` when starting a container like `docker run react-app echo hello` and this `echo hello` will overrider the default `cmd` in dockerfile wherease we cannot easily override a `ENTRYPOINT` when running a container. If we want it we have to use --entrypoint option `docker run react-app --entrypoint`.
+
+### Speed Up Builds
+
+To speed up builds we have to modify our dockerfile. We should orgenise a dockerfiel from the top to bottom based on a frequence of changing files.
+
+'''
+COPY package\*.json .
+RUN npm install
+COPY . .
+'''
