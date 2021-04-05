@@ -390,3 +390,8 @@ We have to options:
 `docker volume inspect app-data`
 
 `docker run -d -p 4000:3000 -v app-data:/app/data react-app` -v stands for volume to pass data in app-data to the directory in a container /app/data. Any changes there will be stored outside of the container so if we delete a container and create a new one we will still have the data which we created in the previous container there.
+
+### Copying Files between the Host and Containers
+
+`docker cp $CONTAINER_ID:/app/log.txt .` to copy a log file to current directory on the host. It works vice-versa too
+`docker cp secret.txt $CONTAINER_ID:/app`
