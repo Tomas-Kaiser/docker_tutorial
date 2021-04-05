@@ -395,3 +395,7 @@ We have to options:
 
 `docker cp $CONTAINER_ID:/app/log.txt .` to copy a log file to current directory on the host. It works vice-versa too
 `docker cp secret.txt $CONTAINER_ID:/app`
+
+### Sharing the Source Code with a Container
+
+`docker run -d -p 5001:3000 -v $(pwd):/app react-app` to map our project directory with the app directory in the container. If we change our source code in host project directory then the app direcotry in the container will be updated too. It is a good for development environment. It is not suitable for stage or produciton environment where we should build a new image and use the image to build a container.
