@@ -286,7 +286,7 @@ We also have another instruction called `ENTRYPOINT` which is very similar to `c
 
 ### Speed Up Builds
 
-To speed up builds we have to modify our dockerfile. We should orgenise a dockerfiel from the top to bottom based on a frequence of changing files.
+To speed up builds we have to modify our dockerfile. We should orgenise a dockerfile from the top to bottom based on a frequence of changing files (from stable instructions to changing instructions).
 
 '''
 COPY package\*.json .
