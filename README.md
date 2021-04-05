@@ -399,3 +399,17 @@ We have to options:
 ### Sharing the Source Code with a Container
 
 `docker run -d -p 5001:3000 -v $(pwd):/app react-app` to map our project directory with the app directory in the container. If we change our source code in host project directory then the app direcotry in the container will be updated too. It is a good for development environment. It is not suitable for stage or produciton environment where we should build a new image and use the image to build a container.
+
+## Running Multi-container Apps
+
+In this section we will cover following:
+
+- Docker compose
+- Docker networking
+- Database migration
+- Running automated tests
+
+The way how to clean up docker images & dockers
+`docker container rm -f $(docker container ls -aq)` -q for listing only container ids then `ocker image rm -f $(docker image ls -aq)`
+
+To run multi container application like (React in frontend, nodeJS in backend and MongoDB), we can run just one following command `docker-compose up`.
