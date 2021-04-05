@@ -346,3 +346,12 @@ In this section we will look at:
 ### Starting Containers
 
 We can start a conationer with following command `docker run react-app` but in this case we cannot use a terminal so in order to be able to use a terminal we can use `-d` which stands for detach. `docker run -d react-app` each container has own generated name so if we want to hove custom name then we can use an option `--name` as follow `docker run -d --name my_container_name react-app`.
+
+### Viewing Logs
+
+To see what happens with container we can use logs as follow:
+
+`docker log $CONTAINER_ID`
+`docker log -f $CONTAINER_ID` to continuoesly see the logs
+`docker log -n 5 -t $CONTAINER_ID` to see last 5 lines (-n 5) with timestamp (-t)
+`docker log --help` to learn more
