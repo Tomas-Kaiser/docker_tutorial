@@ -332,3 +332,17 @@ We can save an image without using hub as follow:
 .tar it is compressed file like .zip in windows
 
 `docker image load -i react-app.tar` to load a compressed image
+
+## Containers
+
+In this section we will look at:
+
+- Starting & stopping containers
+- Publishing ports
+- Viewings logs
+- Excuting commands in containers
+- Removing containers
+
+### Starting Containers
+
+We can start a conationer with following command `docker run react-app` but in this case we cannot use a terminal so in order to be able to use a terminal we can use `-d` which stands for detach. `docker run -d react-app` each container has own generated name so if we want to hove custom name then we can use an option `--name` as follow `docker run -d --name my_container_name react-app`.
