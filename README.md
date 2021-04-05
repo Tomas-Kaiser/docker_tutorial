@@ -313,3 +313,12 @@ Use alaways explicit tag in stage & production environment. It does not care for
 `docker image tag react-app:1 react-app:2` change tag name after building an image
 
 The latest tag does not nessacary mean that it is the latest!
+
+### Sharing images
+
+We can use docker hub to share our images. It works similar like GitHub
+
+First the name image must match with the name of repo on github eg. tomas/react-app
+
+`docker login`
+`docker push tomas/react-app:1`
