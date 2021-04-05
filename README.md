@@ -413,3 +413,7 @@ The way how to clean up docker images & dockers
 `docker container rm -f $(docker container ls -aq)` -q for listing only container ids then `ocker image rm -f $(docker image ls -aq)`
 
 To run multi container application like (React in frontend, nodeJS in backend and MongoDB), we can run just one following command `docker-compose up`.
+
+### JSON & YML Formats
+
+We use JSON for exchanging data & YML for configuration files because it is a bit slower when parsing data.
