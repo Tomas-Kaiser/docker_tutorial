@@ -355,3 +355,7 @@ To see what happens with container we can use logs as follow:
 `docker logs -f $CONTAINER_ID` to continuoesly see the logs
 `docker logs -n 5 -t $CONTAINER_ID` to see last 5 lines (-n 5) with timestamp (-t)
 `docker logs --help` to learn more
+
+### Publishing Ports
+
+`docker run -d -p 80:3000 --name c1 react-app` to run a container on port 80 and the app inside of the container is mapped to 3000
