@@ -383,3 +383,10 @@ We have to options:
 `dokcer rm -f $NAME` in case the container is running we can force to remove it with -f.
 
 `docker ps -a | grep $name` to search in all containers a specific name of the container. It works just for linux.
+
+### Persisting Data Using Volumes
+
+`docker volume crate app-data` to create a volume named app-data
+`docker volume inspect app-data`
+
+`docker run -d -p 4000:3000 -v app-data:/app/data react-app` -v stands for volume to pass data in app-data to the directory in a container /app/data. Any changes there will be stored outside of the container so if we delete a container and create a new one we will still have the data which we created in the previous container there.
