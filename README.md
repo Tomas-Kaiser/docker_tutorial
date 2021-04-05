@@ -322,3 +322,13 @@ First the name image must match with the name of repo on github eg. tomas/react-
 
 `docker login`
 `docker push tomas/react-app:1`
+
+### Saving & Loading Images
+
+We can save an image without using hub as follow:
+
+`docker image save -o react-app.tar react-app:3`
+`-o` stands for output we can see more option if we run `docekr image save --help`
+.tar it is compressed file like .zip in windows
+
+`docker image load -i react-app.tar` to load a compressed image
