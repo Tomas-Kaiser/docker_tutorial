@@ -293,3 +293,14 @@ COPY package\*.json .
 RUN npm install
 COPY . .
 '''
+
+### Removing Images
+
+To remove unsued images and containers we can use following commands:
+
+`docker container prune`
+`docker image prune`
+
+To remove images we can use name or id
+`docker image rm $name`
+`docker image rm $ID`
