@@ -373,3 +373,13 @@ To execute any commands in running container we can use the following command
 `docker stop $CONTAINER_ID` we can stop running container
 `docker start $CONTAINER_ID` we can start stopped container
 docker run is to create and start a new container.
+
+### Removing Containers
+
+We have to options:
+
+`docker container rm $NAME` or container id
+`docker rm $NAME` shorter version
+`dokcer rm -f $NAME` in case the container is running we can force to remove it with -f.
+
+`docker ps -a | grep $name` to search in all containers a specific name of the container. It works just for linux.
