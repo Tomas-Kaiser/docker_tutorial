@@ -359,3 +359,11 @@ To see what happens with container we can use logs as follow:
 ### Publishing Ports
 
 `docker run -d -p 80:3000 --name c1 react-app` to run a container on port 80 and the app inside of the container is mapped to 3000
+
+### Executing Commands in Running Containers
+
+To execute any commands in running container we can use the following command
+
+`docker exec $CONTAINER_ID ls` exec stands for execute. We can use container ide or the name of the container.
+
+`docker exec -it $CONTAINER_ID sh` to use interactive mode with shell session. Instead of sh we can use bash too if the linux support it.
