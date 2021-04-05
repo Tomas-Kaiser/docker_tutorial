@@ -351,7 +351,7 @@ We can start a conationer with following command `docker run react-app` but in t
 
 To see what happens with container we can use logs as follow:
 
-`docker log $CONTAINER_ID`
-`docker log -f $CONTAINER_ID` to continuoesly see the logs
-`docker log -n 5 -t $CONTAINER_ID` to see last 5 lines (-n 5) with timestamp (-t)
-`docker log --help` to learn more
+`docker logs $CONTAINER_ID`
+`docker logs -f $CONTAINER_ID` to continuoesly see the logs
+`docker logs -n 5 -t $CONTAINER_ID` to see last 5 lines (-n 5) with timestamp (-t)
+`docker logs --help` to learn more
