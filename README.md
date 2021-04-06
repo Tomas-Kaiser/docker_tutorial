@@ -416,4 +416,4 @@ To run multi container application like (React in frontend, nodeJS in backend an
 
 ### JSON & YML Formats
 
-We use JSON for exchanging data & YML for configuration files because it is a bit slower when parsing data.
+We use JSON for exchanging data & YML (YAML, both is correct) for configuration files because it is a bit slower when parsing data.
