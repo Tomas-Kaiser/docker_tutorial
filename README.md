@@ -417,3 +417,38 @@ To run multi container application like (React in frontend, nodeJS in backend an
 ### JSON & YML Formats
 
 We use JSON for exchanging data & YML (YAML, both is correct) for configuration files because it is a bit slower when parsing data.
+
+### Creating a Compose file
+
+Create a file called `docker-compose.yml` in root dir.
+
+Setting up the compose-file.yml:
+
+1. version: 3.8 // It is a version of compose file format see more: [compose file](https://docs.docker.com/compose/compose-file/)
+
+```
+version: "3.8" # it is supposed to be valuated as string not a number
+
+services: # each service should have own docker file (the naming of the services does not matter)
+  web:
+    build: ./frontend # this is where we have a docker file
+    ports:
+      - 3000:3000
+  api:
+    build: ./backend
+    ports:
+      - 3001:3001
+    environment:
+      DB_URL: mongodb://db/vidly # connecting to mongo db
+  db:
+    # here we are not using a docker file like above. We use an image
+    # from docker hub
+    image: mongo:4.0-xenial
+    ports:
+      - 27017:27017 # this is a default port for db
+    volumes:
+      - vidly:/data/db # to store data outside of the container
+
+volumes: # we have to define volumes first before we can use it (weird syntax)
+  vidly:
+```
