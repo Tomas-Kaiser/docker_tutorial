@@ -1,3 +1,32 @@
+# Docker
+
+Docker is a platform for bulding, running & shipping applications in consistent manner.
+
+CONTAINER vs VIRTUAL MACHINE
+
+- Container -> an isolated environment for running an application.
+- VM -> an abstraction of a machine (physical hardware)
+
+We are using Hypervisor to create VMs on the computer such as:
+
+- VirtualBox
+- VMware
+- Hyper-v (Windows only)
+
+Downsides of using VM:
+
+- Each VM needs a full-blown OS
+- Slow to start
+- Resource intensive
+
+Whereas Container has below benefits:
+
+- Allow running multiple apps in isolation
+- Are lightweight
+- Use OS of the host
+- Start quickly (mostly matter of seconds)
+- Need less hardware resources
+
 ## Running Linux
 
 Download ubuntu image from docker hub [hub.docker.com](hub.docker.com)
