@@ -27,6 +27,31 @@ Whereas Container has below benefits:
 - Start quickly (mostly matter of seconds)
 - Need less hardware resources
 
+Docker is using Client -> Server (Docker engine) architecture. The client component is using a RESTful API.
+
+![Docker Architecture](./images/DockerArchitecture.png)
+
+Technically, the container is just a process like other process running on your computer. Anyway this is a special kind of process. The container does not contain a full-blown OS. Instead all containers on a host share an OS of the host. To be accurate, all containers share the karnel of the host. Win and Linux container can be run on Win OS. Linux OS can run only Linux container and Mac OS is using a special lightweight Linux VM to run a Linux container.
+
+![OS hosts](./images/OShosts.png)
+
+To install Docker on your OS please click on this link [docker.com/get-started](https://www.docker.com/get-started)
+
+<b>Development workflow using Docker:</b>
+To start off, we take an application and dockerize it which means we make a small change so that we can run the app by docker. We just include a Dockerfile to the app. A Dockerfile is a plain text file which include all instruction that docker uses to package up this app into an image. This image contains everything our image app needs to run.
+
+Image typically contains:
+
+- A cut-down OS
+- A runtime environment (eg. Node)
+- Application files
+- Third-party libries
+- Environment variables
+
+![Docker workflow](./images/Dockerworkflow1.png)
+
+Once we have the image we ask docker to start a container using that image. The container as I mentioned above is just a process but it is a special kind of process because it has its own file system which is provided by the image. It means our application is loaded inside of the container. When we have the image we can push the image to Docker Registery (Docker Hub) where we can store all the images and download it to any computer.
+
 ## Running Linux
 
 Download ubuntu image from docker hub [hub.docker.com](hub.docker.com)
