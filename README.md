@@ -52,15 +52,30 @@ Image typically contains:
 
 Once we have the image we ask docker to start a container using that image. The container as I mentioned above is just a process but it is a special kind of process because it has its own file system which is provided by the image. It means our application is loaded inside of the container. When we have the image we can push the image to Docker Registery (Docker Hub) where we can store all the images and download it to any computer.
 
-## Running Linux
+## The Linux Command Line
+
+Docker is built on basic Linux concept therefore I include this Linux section.
+
+Linux is open-source software and therefore we can find out many diferent Linux distributions such as:
+
+- Ubuntu
+- Debian
+- Alpine
+- Fedora
+- CentOS and so on...
+
+### Running Linux
 
 Download ubuntu image from docker hub [hub.docker.com](hub.docker.com)
 
 Instead of running `docker pull ubuntu`, we can run `docker run ubunut` and if the image exists locally, docker will start a container with this image otherwise it will pull the image in behind the scene and then start it container.
 
 `docker ps` to see list of running processes or running containers
+
 `docker ps -a` to see all containers (stopped containers included)
-`docker run -it ubuntu` to create & start newly created container with interactive mode
+
+`docker run -it ubuntu` to create & start newly created container with interactive mode where `-it` stands of interactive mode and `ubuntu` is a name of the image.
+
 `docker start -i $CONTAINER_ID` to start a container with interactive mode
 `docker exec -it -u $USER_NAME $CONTAINER_ID bash` to connect into running container with different user then root with bash.
 
@@ -78,7 +93,7 @@ Remove keyword is used for removing packages eg. `apt remove nano`
   - bin -> includes binaries or programs
   - boot -> includes all the files related to booting
   - dev -> stands for devices because everything is a file in linux
-  - etc -> one of the oppinion is that it is editable text configuration
+  - etc -> one of the oppinion is that it is editable text configuration (for storing cofing files)
   - home -> home directory where users are stored
   - root -> home dir for root user
   - lib -> liberies file
