@@ -100,6 +100,16 @@ Remove keyword is used for removing packages eg. `apt remove nano`
   - var -> variable where we store files which are updated frequently
   - proc -> includes files which represents running processes
 
+#### Navigating the File System
+
+- `pwd` is to Print Working Directory
+- `ls` is to show a list of files and directories
+  - `ls -1` is to show a list of files and directories in one column
+  - `ls -l` is to show a long listing with more information about files and directories
+- `cd` is to Change Directory following with relative or absolute path
+  - `cd ..` to go one level up
+- `~` is a home directory so we can use such this command `cd ~`
+
 #### Viewing commands
 
 `nano text.txt` create/open a file and write some text
