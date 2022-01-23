@@ -110,6 +110,19 @@ Remove keyword is used for removing packages eg. `apt remove nano`
   - `cd ..` to go one level up
 - `~` is a home directory so we can use such this command `cd ~`
 
+#### Manipulating Files and Directories
+
+- `mkdir` is to make (create) a directory
+- `mv test test1` is to rename a directory from test to test1
+- `touch` is to create a new file
+  - `mv` is also to use as move file to different directory such as `mv file.txt /etc`
+- `rm` is to remove one or more files such as `rm file1.txt file2.txt` etc
+- `rm -r` is to remove a directory and all items in the directory. The `-r` stands for recursively
+
+Notes:
+
+- when in shell we can remove last whole word with hitting control-w on MacOS
+
 #### Viewing commands
 
 `nano text.txt` create/open a file and write some text
