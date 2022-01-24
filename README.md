@@ -125,9 +125,11 @@ Notes:
 
 #### Viewing commands
 
+We can use `nano` which is a bisic text editor for Linux.
+
 `nano text.txt` create/open a file and write some text
-`cat text.txt` good for short text
-`more text.txt` good for big text but we can just scroll down
+`cat text.txt` good for showing a short text (`cat` stands for concatinate)
+`more text.txt` good for showing a big text but we can just scroll down
 `less text.txt` which is a new command and we can also scroll up but it might need to install using `apt install less`
 `head -n 5 text.txt` to show first 5 lines of the file text.txt
 `tail -n 5 text.txt` to show last 5 lines of the file text.txt
