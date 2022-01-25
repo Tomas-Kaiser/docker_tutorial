@@ -145,12 +145,14 @@ Standard output is a screen & standard input is a keyboard. We can redirect this
 
 #### Searching for Text
 
-`grep` global regular expression print is used to search text in one or more files
-`grep -i` search case insensitive
-`grep -i hello file.txt`
-`grep -i hello file1.txt file2.txt`
-`grep -i -r hello .` -r is recursevly or we can combined the flags
-`grep -ir hello .` to find recursevly hello in current directory
+The ways how to search for a string in a file:
+
+- `grep` command stands for a global regular expression print is used to search text in one or more files (it is a case-sensitive)
+- `grep -i` search case insensitive
+- `grep -i hello file.txt` to search hello in file.txt
+- `grep -i hello file1.txt file2.txt` to search in a multiple files
+- `grep -i -r hello .` -r is recursevly or we can combined the flags
+- `grep -ir hello .` to find recursevly hello in current directory
 
 #### Finding Files & Directories
 
