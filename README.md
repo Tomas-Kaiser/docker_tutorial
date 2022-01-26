@@ -156,11 +156,12 @@ The ways how to search for a string in a file:
 
 #### Finding Files & Directories
 
-`find` command is to find files and directories. If we run `find` it will print out all files and directories in the current directory recursively.
-`find -type d` to find all directories only in current directory
-`find -type f` to find all files only in current directory
-`find -type f -name "f*"` to find all files with name which starts with f
-`find -type f -iname "f*"` iname is case insensitive
+- `find` command is to find files and directories. If we run `find` it will print out all files and directories in the current directory recursively.
+- `find -type d` to find all directories only in current directory
+- `find -type f` to find all files only in current directory
+- `find -type f -name "f*"` to find all files with name which starts with f
+- `find -type f -iname "f*"` iname is case insensitive
+- We can also sypply the path after `find` such as `find /etc -type f -iname "f*"`
 
 #### Chaining Commads
 
