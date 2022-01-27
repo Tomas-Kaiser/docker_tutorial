@@ -173,11 +173,12 @@ We can also pipeling like `ls /bin | less` ls /bin output will be sent to the le
 Another example `ls /bin | head -n 5`
 
 We can break a line with back slash `\` like
-'''
+
+```
 mkdir test;\
-cd hello;\
-echo done
-'''
+> cd hello;\
+> echo done
+```
 
 #### Environment Variables
 
