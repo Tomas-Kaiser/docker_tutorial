@@ -284,11 +284,11 @@ Images include everyting what application needs to run. It contains:
 
 Once we have an image we can start a contairner from it.
 
-Containers is like a virtual machine (vm).
+Containers are like a virtual machine (vm).
 
 - Provides an isolated environment for executing an application
-- Can be stopped & restarted containers
-- A container is "just" a spacial kind of system process!
+- Containers can be stopped & restarted
+- A container is "just" a spacial kind of system process because it has own file system which is porvided by the image!
 
 ### Docker File
 
