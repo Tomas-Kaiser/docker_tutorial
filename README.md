@@ -213,18 +213,18 @@ Users are store in a configuration file in /etc/passwd (It is missleading becaus
 
 #### Managing Groups
 
-`groupadd`
-`groupmod`
-`groupdel`
+- `groupadd`
+- `groupmod`
+- `groupdel`
 
-`groupadd developers` to have a group for developers with the same kind of permission
-`cat /etc/group` to see all groups
+- `groupadd developers` to have a group for developers with the same kind of permission
+- `cat /etc/group` to see all groups
 
 Each user has one primary group and zero or more suplimentery groups. Primary group is automatically created when we create a new user with the same name.
 
-`usermod -G developers john` to add john into developers group
-`usermod -G developers,artist john` to add john into multiple groups
-`groups john` to see in which groups is john
+- `usermod -G developers john` to add john into developers group
+- `usermod -G developers, artist john` to add john into multiple groups
+- `groups john` to see in which groups is john
 
 #### File Permissions
 
