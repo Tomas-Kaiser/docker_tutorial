@@ -228,19 +228,20 @@ Each user has one primary group and zero or more suplimentery groups. Primary gr
 
 #### File Permissions
 
-`ls -l` to see the permissions of the files
+- `ls -l` to see the permissions of the files
 
-`-rw-r--r-- 1 root root 11 Apr 3 15:16 deploy.sh`
-`drwxr-xr-x 2 john john 4096 Apr 2 18:00 john`
+- `-rw-r--r-- 1 root root 11 Apr 3 15:16 deploy.sh`
+- `drwxr-xr-x 2 john john 4096 Apr 2 18:00 john`
 
-First possition: `-` stands for file `d` stands for directory
+First possition: `-` stands for file and `d` stands for directory
 After the first possition, there three groups then.
-`rw- r-- r--`
-`rwx-xr-x`
 
-`r` stands for read permission
-`w` stands for write permission
-`x` stands for execute permission
+- `rw- r-- r--`
+- `rwx-xr-x`
+
+- `r` stands for read permission
+- `w` stands for write permission
+- `x` stands for execute permission
 
 By default all directories have `x` execute permisson as we can use `cd`
 
@@ -250,15 +251,15 @@ The second group repersents the permision for the group that onws that file => a
 
 The third group is a permission for everyone else.
 
-`./deploy.sh` to execute the file. To give a executable permission we need to use `chmod` change mode command.
+- `./deploy.sh` to execute the file. To give a executable permission we need to use - - - `chmod` change mode command.
 
-`chmod u` user
-`chmod g` group
-`chmod o` others
+- `chmod u` user
+- `chmod g` group
+- `chmod o` others
 
-`chmod u+x deploy.sh` to add execute permisson for a user
-`chmod u-x` to remove execute permission for a user
-`chmod og+x+r-w file1.sh file2.sh` we can write a number of variations...
+- `chmod u+x deploy.sh` to add execute permisson for a user
+- `chmod u-x` to remove execute permission for a user
+- `chmod og+x+r-w file1.sh file2.sh` we can write a number of variations...
 
 ## Building Images
 
