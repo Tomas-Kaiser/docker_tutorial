@@ -335,14 +335,17 @@ Start a container with created image react-app with interactive mode.
 
 We use `COPY` & `ADD`. It is very similiar but `ADD` has additional features.
 
-`COPY` to copy all the current files & directories of the current directory
+- `COPY` to copy all the current files & directories of the current directory
+- `COPY . /app/` to copy all of the files & directories of the current directory to copy into /app/ which is an absolute path. If the /app directory does not exist, the docker will automatically create it. If we want to copy two or more files/directories we have to end it with / (eg. /app<b>/</b>). To use relative path we have to use `WORKDIR` like:
 
-`COPY . /app/` to copy all of the files & directories of the current directory to copy into /app/ which is an absolute path. To use relative path we have to use `WORKDIR` like:
+```
+WORKDIR /app  > we set up that working directory is in /app directory
+COPY . .      > therefore first . is the source and the second . is a destination which is currently in /app
+```
 
-'''
-WORKDIR /app
-COPY . .
-'''
+If the file contains a space we can use special syntax ["","",""] as follow:
+
+- `COPY ["Hello World.txt", "."]`
 
 We can also use `ADD` which has the same syntax as `COPY` but ADD has two additional features. With ADD we can add files from url `ADD http://.../file.json .`or if we pass compressed file it will automaticaly uncompress the file `ADD file.zp .` The best practise is to use `COPY` unless we need to use those two additional features.
 
