@@ -292,7 +292,7 @@ Containers are like a virtual machine (vm).
 
 ### Docker File
 
-The first thing to dokerize an application is adding a Dockerfile. A Dockerfile contains an instructions for building an image.
+The first thing to dokerize an application is adding a Dockerfile. A Dockerfile contains an instructions for building an image using below commands:
 
 - FROM
 - WORKDIR
@@ -307,24 +307,29 @@ The first thing to dokerize an application is adding a Dockerfile. A Dockerfile 
 
 ### Choosing the Right Images
 
-For React app we need a Node running on Alpine OS.
-Into Dockerfile we add `FROM`:
-`FROM node:14.16.0-alpine3.13`
+The base image can be an OS system like linux or windows. Also it can be OS + runtime environment.
 
-Now we can build an image:
-`docker build -t react-app .`
-`-t` to tag/name an image (in this case we named our image react-app)
-`.` to tell docker where to find a Dockerfile
+For React app we need a Node running on Alpine OS.
+
+Into Dockerfile we add `FROM`:
+
+- `FROM node:14.16.0-alpine3.13` > Node version 14.16.0 on top of the alpine3.13 (a very small linux).
+- Do not use the `:latest` as it can caused some issue in the future. It is always better to use a specific version
 
 `docker images` or `docker image ls` to see all build images!
 
-Start a container with created image react-app.
-`docker run -it react-app`
-`-i` stands for interactive regime
-`-t` stands for tag
-`-it` it is combination of above
+Now we can build an image:
 
-`docker run -it react-app sh` To run the container with shell (Alpine does not support bash as it is very small version of linux, onlu shell can be used to see files etc.)
+- `docker build -t react-app .`
+- `-t` to tag/name an image (in this case we named our image react-app)
+- `.` to tell docker where to find a Dockerfile
+
+Start a container with created image react-app with interactive mode.
+
+- `docker run -it react-app sh` (Alpine does not support bash as it is very small version of linux, only shell can be used to see files etc.). If we omit the shell then we will be inside of node environment.
+- `-i` stands for interactive regime
+- `-t` stands for tag
+- `-it` it is combination of above
 
 ### Copying Files & Directories
 
