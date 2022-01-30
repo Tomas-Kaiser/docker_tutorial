@@ -428,18 +428,18 @@ To remove images we can use name or id
 Use alaways explicit tag in stage & production environment. It does not care for development environment. In default if we do not supply a tag then it is automatically the latest.
 
 - `docker build -t react-app:1 .` during the build time
-- `docker image tag react-app:1 react-app:2` change tag name after building an image
+- ``docker image tag react-app:1 react-app:2` change tag name after building an image
 
 The latest tag does not nessacary mean that it is the latest!
 
 ### Sharing images
 
-We can use docker hub to share our images. It works similar like GitHub
+We can use docker hub to share our images. It works similar like GitHub.
 
-First the name image must match with the name of repo on github eg. tomas/react-app
+First the name image must match with the name of repo on Docker Hub eg. tomas/react-app The repo can contain one or more tags.
 
-`docker login`
-`docker push tomas/react-app:1`
+- `docker login`
+- `docker push tomas/react-app:1`
 
 ### Saving & Loading Images
 
