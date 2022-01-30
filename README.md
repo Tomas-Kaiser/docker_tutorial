@@ -411,7 +411,7 @@ RUN npm install
 COPY . .
 ```
 
-### Removing Images
+### `Removing Images`
 
 To remove unsued images and containers we can use following commands:
 
@@ -427,8 +427,8 @@ To remove images we can use name or id
 
 Use alaways explicit tag in stage & production environment. It does not care for development environment. In default if we do not supply a tag then it is automatically the latest.
 
-`docker build -t react-app:1 .` during the build time
-`docker image tag react-app:1 react-app:2` change tag name after building an image
+- `docker build -t react-app:1 .` during the build time
+- `docker image tag react-app:1 react-app:2` change tag name after building an image
 
 The latest tag does not nessacary mean that it is the latest!
 
