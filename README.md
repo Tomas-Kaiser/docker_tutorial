@@ -355,7 +355,10 @@ To exclude files & directories we have to create a file `.dockerignore`. It is s
 
 ### Running Commands
 
-We use a `RUN` command to execute any commands we would normally execute in a terminal session like `RUN npm install` or `RUN apt install python`.
+We use a `RUN` command to execute any commands we would normally execute in a terminal session such as:
+
+- `RUN npm install`
+- `RUN apt install python`
 
 ### Setting Environment Variables
 
