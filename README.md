@@ -362,7 +362,9 @@ We use a `RUN` command to execute any commands we would normally execute in a te
 
 ### Setting Environment Variables
 
-Sometimes we need to setup environemnt variables such as `ENV API_URL=http://api.myapp.com/`
+Sometimes we need to setup environemnt variables such as
+
+- `ENV API_URL=http://api.myapp.com/`
 
 ### Exposing Ports
 
