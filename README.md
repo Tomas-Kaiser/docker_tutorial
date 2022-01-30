@@ -351,7 +351,7 @@ We can also use `ADD` which has the same syntax as `COPY` but ADD has two additi
 
 ### Excluding Files & Directories
 
-To exclude files & directories we have to create a file .dockerignore. It is similar to .gitignore
+To exclude files & directories we have to create a file `.dockerignore`. It is similar to .gitignore
 
 ### Running Commands
 
