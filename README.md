@@ -372,8 +372,11 @@ Sometimes we need to setup environemnt variables such as
 
 ### Setting the User
 
-We should not use root user because if we connect to the app with root user then a hacker can rewrite our app but with app user it does not have a permission to write anything. So to create a new user to run our app we can use folling commad:
-`RUN addgroup app && adduser -S -G app app` to add group called app & add a user called app -S system user into -G group called app. Note: alpine linux does have useradd like ubuntu. It has just adduser command.
+We should not use a root user because if we connect to the app with root user then a hacker can rewrite our app but with app user it does not have a permission to write anything. So to create a new user to run our app we can use folling commad:
+
+- `RUN addgroup app && adduser -S -G app app` to add group called app & add a user called app -S system user into -G group called app. The first app after -G is a name of the group we have created before && and the second app is the username.
+
+Note: alpine linux does not have useradd like ubuntu. It has just adduser command.
 
 `USER app` to set user so that all the following commands will be executed by this user called app (not with root user as a default).
 
