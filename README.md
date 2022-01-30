@@ -386,13 +386,14 @@ Note: alpine linux does not have useradd like ubuntu. It has just adduser comman
 
 Then we can simply run `docker run react-app`. Note `CMD` is suplying a default command so we can use it just once (the very last will be used if more CMD commands are in dockerfile).
 
-RUN x CMD
+<b>RUN vs. CMD</b>
 
 Because of both these can execute commands. The `RUN` instruction is a build time instruction (executing in a time of building the image) in contrast `CMD` instruction is a run time instruction (executing when starting a container).
 
 `CMD` construction has to forms:
-`CMD npm start` is a shell form
-`cmd ["npm", "start"]` is a exec (execute) form
+
+- `CMD npm start` is a shell form
+- `cmd ["npm", "start"]` is a exec (execute) form
 
 The difference is when execude this `CMD npm start` docke will execute this command inside of separete shell. In linex this is in /bin/sh in windows cmd. The best practise is to use execute form because of this we can execute this command `cmd ["npm", "start"]` directly and there is no need to spin up another shell process. Also it makes it easier and faster to clean up resources when you stop containers. ALWAYS use the execute form!
 
