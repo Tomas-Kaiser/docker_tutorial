@@ -368,7 +368,7 @@ Sometimes we need to setup environemnt variables such as
 
 ### Exposing Ports
 
-`EXPOSE 3000` to expose a container to listen to 3000
+- `EXPOSE 3000` to expose a container to listen to 3000
 
 ### Setting the User
 
