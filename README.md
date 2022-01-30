@@ -415,12 +415,13 @@ COPY . .
 
 To remove unsued images and containers we can use following commands:
 
-`docker container prune`
-`docker image prune`
+- `docker container prune` is to remove all stopped containers.
+- `docker image prune` is to remove dangling images (images which lost connection to image - just empty uname images. It happents when we rebuild images)
 
 To remove images we can use name or id
-`docker image rm $name`
-`docker image rm $ID`
+
+- `docker image rm $name`
+- `docker image rm $ID`
 
 ### Tagging images
 
