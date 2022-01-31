@@ -515,10 +515,14 @@ We have two options:
 
 ### Persisting Data Using Volumes
 
-`docker volume crate app-data` to create a volume named app-data
-`docker volume inspect app-data`
+We should not store any data in container file system because whenever we delete the contaier the file system will be also deleted therefore we should use volumes to store persisting data (outside of the container).
 
-`docker run -d -p 4000:3000 -v app-data:/app/data react-app` -v stands for volume to pass data in app-data to the directory in a container /app/data. Any changes there will be stored outside of the container so if we delete a container and create a new one we will still have the data which we created in the previous container there.
+Volume is a storage outside of the containers. It can be directly on the host or somewhere on the cloud.
+
+- `docker volume crate app-data` to create a volume named app-data
+- `docker volume inspect app-data`
+
+- `docker run -d -p 4000:3000 -v app-data:/app/data react-app` -v stands for volume to pass data in app-data to the directory in a container /app/data. Any changes there will be stored outside of the container so if we delete a container and create a new one we will still have the data which we created in the previous container there.
 
 ### Copying Files between the Host and Containers
 
