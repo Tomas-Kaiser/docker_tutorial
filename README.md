@@ -493,9 +493,9 @@ If we do not expose the port inside of Dockerfile then we have to do it when run
 
 To execute any commands in running container we can use the following command
 
-`docker exec $CONTAINER_ID ls` exec stands for execute. We can use container ide or the name of the container.
+- `docker exec $CONTAINER_ID ls` exec stands for execute. We can use container ID or the name of the container.
 
-`docker exec -it $CONTAINER_ID sh` to use interactive mode with shell session. Instead of sh we can use bash too if the linux support it.
+- `docker exec -it $CONTAINER_ID sh` to use interactive mode with shell session. Instead of sh we can use bash too if the linux support it.
 
 ### Stopping & Starting Containers
 
