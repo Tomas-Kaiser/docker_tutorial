@@ -526,8 +526,8 @@ Volume is a storage outside of the containers. It can be directly on the host or
 
 ### Copying Files between the Host and Containers
 
-`docker cp $CONTAINER_ID:/app/log.txt .` to copy a log file to current directory on the host. It works vice-versa too
-`docker cp secret.txt $CONTAINER_ID:/app`
+- `docker cp $CONTAINER_ID:/app/log.txt .` to copy a log file to current directory on the host. It works vice-versa too
+- `docker cp secret.txt $CONTAINER_ID:/app`
 
 ### Sharing the Source Code with a Container
 
