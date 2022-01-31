@@ -542,8 +542,10 @@ In this section we will cover following:
 - Database migration
 - Running automated tests
 
-The way how to clean up docker images & dockers
-`docker container rm -f $(docker container ls -aq)` -q for listing only container ids then `ocker image rm -f $(docker image ls -aq)`
+The way how to clean up docker containers & images:
+
+- `docker container rm -f $(docker container ls -aq)` -q stands for for listing only container ids
+- `docker image rm -f $(docker images -q)`
 
 To run multi container application like (React in frontend, nodeJS in backend and MongoDB), we can run just one following command `docker-compose up`.
 
