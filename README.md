@@ -499,19 +499,19 @@ To execute any commands in running container we can use the following command
 
 ### Stopping & Starting Containers
 
-`docker stop $CONTAINER_ID` we can stop running container
-`docker start $CONTAINER_ID` we can start stopped container
-docker run is to create and start a new container.
+- `docker stop $CONTAINER_ID` we can stop a running container
+- `docker start $CONTAINER_ID` we can start a stopped container
+
+Note: `docker run` is to create and start a new container.
 
 ### Removing Containers
 
-We have to options:
+We have two options:
 
-`docker container rm $NAME` or container id
-`docker rm $NAME` shorter version
-`dokcer rm -f $NAME` in case the container is running we can force to remove it with -f.
-
-`docker ps -a | grep $name` to search in all containers a specific name of the container. It works just for linux.
+- `docker container rm $NAME` or we can use container id instead of the name
+- `docker rm $NAME` shorter version with omitting the container keyword
+- `dokcer rm -f $NAME` in case the container is running we can force to remove it with -f or just stop the container and remove as mentioned above.
+- `docker ps -a | grep $name` to search in all containers a specific name of the container. It works just for linux.
 
 ### Persisting Data Using Volumes
 
