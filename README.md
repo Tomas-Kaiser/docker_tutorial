@@ -484,7 +484,10 @@ To see what happens with container we can use logs as follow:
 
 ### Publishing Ports
 
-`docker run -d -p 80:3000 --name c1 react-app` to run a container on port 80 and the app inside of the container is mapped to 3000
+If we do not expose the port inside of Dockerfile then we have to do it when running the container as below:
+
+- `docker run -d -p 80:3000 --name c1 react-app` to run a container on port 80 and the app inside of the container is mapped to 3000
+- port 80 is mapped to port 3000 inside of container.
 
 ### Executing Commands in Running Containers
 
