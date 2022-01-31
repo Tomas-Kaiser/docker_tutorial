@@ -477,10 +477,10 @@ but in this case we cannot use a terminal so in order to be able to use a termin
 
 To see what happens with container we can use logs as follow:
 
-`docker logs $CONTAINER_ID`
-`docker logs -f $CONTAINER_ID` to continuoesly see the logs
-`docker logs -n 5 -t $CONTAINER_ID` to see last 5 lines (-n 5) with timestamp (-t)
-`docker logs --help` to learn more
+- `docker logs $CONTAINER_ID`
+- `docker logs -f $CONTAINER_ID` to continuoesly see the logs
+- `docker logs -n 5 -t $CONTAINER_ID` to see last 5 lines (-n 5) with timestamp (-t)
+- `docker logs --help` to learn more
 
 ### Publishing Ports
 
