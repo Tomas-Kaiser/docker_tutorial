@@ -634,3 +634,8 @@ Note: we have to be in the root directory where the docker-compose.yml is locate
 When we run docker-compose. It automatically creates a network and adds that containers on that network so these containers can talk to each other.
 
 - `docker network ls` to see all the networks
+
+### Viewing Logs
+
+`docker-compose logs` to see all logs from all containers
+`docker logs <container_id>` to see logs from particular running container. We can supply `-f` to follow logs
