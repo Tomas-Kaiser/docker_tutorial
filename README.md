@@ -639,3 +639,25 @@ When we run docker-compose. It automatically creates a network and adds that con
 
 `docker-compose logs` to see all logs from all containers
 `docker logs <container_id>` to see logs from particular running container. We can supply `-f` to follow logs
+
+### Publishing Changes
+
+To update the host and container with a new code without rebuilding the images we can use volumes as we have already used it above. In this case we can use dokcer-compose.yml:
+
+```
+services:
+  web:
+    build: ./frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app   # To map ./frontend of the host to /app in the container
+  api:
+    build: ./backend
+    ports:
+      - 3001:3001
+    environment:
+      DB_URL: mongodb://db/vidly
+    volumes:
+      - ./backend:/app   # To map ./backend of the host to /app in the container
+```
