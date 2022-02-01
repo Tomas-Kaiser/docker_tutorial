@@ -626,5 +626,11 @@ Note: we have to be in the root directory where the docker-compose.yml is locate
 
 ### Starting and Stopping the Application
 
-- `docker-compose up` to start the application (containers)
+- `docker-compose up -d` to start the application (containers) with the detach mode (-d)
 - `docker-compose down` to stop the application (containers)
+
+### Docker Networking
+
+When we run docker-compose. It automatically creates a network and adds that containers on that network so these containers can talk to each other.
+
+- `docker network ls` to see all the networks
