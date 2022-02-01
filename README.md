@@ -551,11 +551,41 @@ To run multi container application like (React in frontend, nodeJS in backend an
 
 ### JSON & YML Formats
 
-We use JSON for exchanging data & YML (YAML, both is correct) for configuration files because it is a bit slower when parsing data.
+We use JSON for exchanging data & YML (YAML, both is correct). We use YML for configuration files because it is a bit slower when parsing data.
+
+JSON file:
+
+```
+{
+  "name": "The Ultimate Docker Course",
+  "price": 149,
+  "is_published": true,
+  "tags": ["software", "devops"],
+  "author": {
+    "first_name": "Mosh",
+    "last_name": "hamedani"
+  }
+}
+```
+
+YML file:
+
+```
+---
+name: The Ultimate Docker Course
+price: 149
+is_published: true
+tags:
+  - sofware
+  - devops
+author:
+  first_name: Mosh
+  last_name: hamedani
+```
 
 ### Creating a Compose file
 
-Create a file called `docker-compose.yml` in root dir.
+Create a file called `docker-compose.yml` in the root dir.
 
 Setting up the compose-file.yml:
 
@@ -587,3 +617,14 @@ services: # each service should have own docker file (the naming of the services
 volumes: # we have to define volumes first before we can use it (weird syntax)
   vidly:
 ```
+
+### Build Images
+
+- `docker-compose build` to build the images.
+
+Note: we have to be in the root directory where the docker-compose.yml is located.
+
+### Starting and Stopping the Application
+
+- `docker-compose up` to start the application (containers)
+- `docker-compose down` to stop the application (containers)
