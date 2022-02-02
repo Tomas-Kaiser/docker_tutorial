@@ -15,6 +15,7 @@ services: # each service should have own docker file (the naming of the services
       DB_URL: mongodb://db/vidly # connecting to mongo db
     volumes:
       - ./backend:/app
+    command: ./docker-entrypoint.sh # to runs shell script to migrate db data
   db:
     # here we are not using a docker file like above. We use an image
     # from docker hub

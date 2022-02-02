@@ -661,3 +661,26 @@ services:
     volumes:
       - ./backend:/app   # To map ./backend of the host to /app in the container
 ```
+
+### Migrating the Database
+
+We add command to run shell scirpt in order to migrate DB data.
+
+```
+services: # each service should have own docker file (the naming of the services does not matter)
+  web:
+    build: ./frontend # this is where we have a docker file
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app
+  api:
+    build: ./backend
+    ports:
+      - 3001:3001
+    environment:
+      DB_URL: mongodb://db/vidly # connecting to mongo db
+    volumes:
+      - ./backend:/app
+    command: ./docker-entrypoint.sh # to runs shell script to migrate db data
+```
