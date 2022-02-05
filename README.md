@@ -684,3 +684,23 @@ services: # each service should have own docker file (the naming of the services
       - ./backend:/app
     command: ./docker-entrypoint.sh # to runs shell script to migrate db data
 ```
+
+### Running Tests
+
+`npm test` to run automation tests but we can also run the tests inside of the container but it might be very slow. We update our docker-compose as follow:
+
+```
+services: # each service should have own docker file (the naming of the services does not matter)
+  web:
+    build: ./frontend # this is where we have a docker file
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app
+  web-test:
+    build: vidly_web
+    volumes:
+      - ./frontend:/app
+    command: npm test # this overwrite the default command for this image
+  ...
+```
